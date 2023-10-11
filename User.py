@@ -12,12 +12,14 @@ class Pizza:
         self.numberofpizzas = numberofpizzas
     
     def total(self):
+        self.price = self.size + self.numberofpizzas
         if p.numberofpizzas >= 3:
             (self.price / 15) + self.price
+        return self.price
 
 
-
-
-    
-    #def __str__(self):
-       # return
+    def __str__(self):
+        return f'''You have ordered {self.numberofpizzas} {self.size} pizzas
+        Your total after discount is {self.price}
+        Order will be delivered to {u.name} at {u.address}
+        Receipt will be emailed to {u.email}'''
